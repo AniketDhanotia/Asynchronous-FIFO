@@ -1,6 +1,6 @@
 module dual_port_ram #(
-    addr_width= 4;
-    data_width=8;   
+    parameter addr_width = 4,
+    parameter data_width = 8
 ) (
     input wire wclk, 
     input wire winc,
