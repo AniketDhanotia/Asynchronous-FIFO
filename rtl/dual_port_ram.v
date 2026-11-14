@@ -17,4 +17,15 @@ module dual_port_ram #(
     localparam depth = 1<<addr_width;   
     reg [data_width-1:0]mem[0:depth-1];
     
+    always @(posedge wclk) begin
+        if(winc) begin
+            mem[waddr] <= wdata;
+        end
+    end
+
+    always @(posedge rclk) begin
+        if(rinc) begin
+            rdata <= mem[raddr];
+        end
+    end
 endmodule
