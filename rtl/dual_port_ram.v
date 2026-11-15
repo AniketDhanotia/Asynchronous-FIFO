@@ -10,7 +10,7 @@ module dual_port_ram #(
     input wire rclk,
     input wire rinc,
     input wire [addr_width-1:0]raddr,
-    output reg [data_width-1:0]rdata;
+    output reg [data_width-1:0]rdata
 
 );
     

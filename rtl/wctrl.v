@@ -4,11 +4,10 @@ module wctrl #(
 )
 ( input wire wclk,
   input wire wrst_n,
-  input wire [addr_width -1:0]raddr_gray_sync);
-( output reg full,
-  output reg [addr_width-2:0]waddr,
-  output reg [addr_width-1:0]waddr_gray,
-
+  input wire [addr_width -1:0]raddr_gray_sync,
+  output reg full,
+  output wire [addr_width-2:0]waddr,
+  output reg [addr_width-1:0]waddr_gray
   );
   reg [addr_width-1:0]wbin;
   wire [addr_width-1:0]wbin_next;

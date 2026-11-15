@@ -4,11 +4,10 @@ module rctrl #(
 )
 ( input wire rclk,
   input wire rrst_n,
-  input wire [addr_width-1:0]rq2_wptr);
-( output reg empty,
-  output reg [addr_width-2:0]raddr,
-  output reg [addr_width-1:0]raddr_gray,
-
+  input wire [addr_width-1:0]rq2_wptr,
+  output reg empty,
+  output wire [addr_width-2:0]raddr,
+  output reg [addr_width-1:0]raddr_gray
   );
   reg [addr_width-1:0]rbin;
   wire [addr_width-1:0]rbin_next;
